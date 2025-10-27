@@ -27,7 +27,8 @@
  * @returns {string}
  */
 export function frontDoorResponse(line) {
-  throw new Error('Remove this line and implement the function');
+  const firstCharacter = line.charAt(0);
+  return firstCharacter;
 }
 
 /**
@@ -38,7 +39,7 @@ export function frontDoorResponse(line) {
  * @returns {string} the front door password
  */
 export function frontDoorPassword(word) {
-  throw new Error('Remove this line and implement the function');
+  throw new Error("Remove this line and implement the function");
 }
 
 /**
@@ -49,7 +50,7 @@ export function frontDoorPassword(word) {
  * @returns {string}
  */
 export function backDoorResponse(line) {
-  throw new Error('Remove this line and implement the function');
+  throw new Error("Remove this line and implement the function");
 }
 
 /**
@@ -60,5 +61,5 @@ export function backDoorResponse(line) {
  * @returns {string} the back door password
  */
 export function backDoorPassword(word) {
-  throw new Error('Remove this line and implement the function');
+  throw new Error("Remove this line and implement the function");
 }

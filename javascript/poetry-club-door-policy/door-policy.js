@@ -39,7 +39,9 @@ export function frontDoorResponse(line) {
  * @returns {string} the front door password
  */
 export function frontDoorPassword(word) {
-  throw new Error("Remove this line and implement the function");
+  const titleCasedWord =
+    word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  return titleCasedWord;
 }
 
 /**

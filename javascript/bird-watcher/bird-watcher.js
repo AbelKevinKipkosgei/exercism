@@ -45,9 +45,7 @@ export function birdsInWeek(birdsPerDay, week) {
  * @returns {void} should not return anything
  */
 export function fixBirdCountLog(birdsPerDay) {
-  for (let i = 0; i < birdsPerDay.length; i++) {
-    if (i % 2 === 0) {
-      birdsPerDay[i]++;
-    }
+  for (let i = 0; i < birdsPerDay.length; i += 2) {
+    birdsPerDay[i]++;
   }
 }

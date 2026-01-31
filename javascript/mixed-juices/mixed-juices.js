@@ -66,5 +66,34 @@ export function limesToCut(wedgesNeeded, limes) {
  * @returns {string[]} remaining orders after the time is up
  */
 export function remainingOrders(timeLeft, orders) {
-  throw new Error("Remove this line and implement the function");
+  let ordersDone = [];
+
+  while (timeLeft > 0 && orders.length > 0) {
+    let order = orders[0];
+    let lowerCaseOrder = order.toLowerCase();
+    let timeRequired = 0;
+
+    switch (lowerCaseOrder) {
+      case "pure strawberry joy":
+        timeRequired = 0.5;
+        break;
+      case "energizer":
+        timeRequired = 1.5;
+        break;
+      case "green garden":
+        timeRequired = 1.5;
+        break;
+      case "tropical island":
+        timeRequired = 3;
+        break;
+      case "all or nothing":
+        timeRequired = 5;
+        break;
+      default:
+        timeRequired = 2.5;
+    }
+    timeLeft -= timeRequired;
+    ordersDone.push(orders.shift());
+  }
+  return orders;
 }

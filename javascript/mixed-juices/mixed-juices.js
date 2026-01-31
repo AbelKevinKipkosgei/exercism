@@ -39,17 +39,21 @@ export function timeToMixJuice(name) {
 export function limesToCut(wedgesNeeded, limes) {
   let limesCut = 0;
   let wedgesCut = 0;
-  while (wedgesCut < wedgesNeeded) {
-    for (const lime of limes) {
-      if (lime === "small") {
+  for (const lime of limes) {
+    if (wedgesCut >= wedgesNeeded) break;
+
+    switch (lime) {
+      case "small":
         wedgesCut += 6;
-      } else if (lime === "medium") {
+        break;
+      case "medium":
         wedgesCut += 8;
-      } else if (lime === "large") {
+        break;
+      case "large":
         wedgesCut += 10;
-      }
-      limesCut += 1;
+        break;
     }
+    limesCut++;
   }
   return limesCut;
 }

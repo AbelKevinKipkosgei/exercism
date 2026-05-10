@@ -33,7 +33,15 @@ export function revokeTicket(visitor) {
  * @returns {string} ticket status
  */
 export function ticketStatus(tickets, ticketId) {
-  throw new Error("Remove this line and implement the function");
+  let statusOfTicket = "unknown";
+  if (!Object.hasOwn(tickets, ticketId)) {
+    statusOfTicket = `unknown ticket id`;
+  } else if (tickets[ticketId] === null) {
+    statusOfTicket = `not sold`;
+  } else {
+    statusOfTicket = `sold to ${tickets[ticketId]}`;
+  }
+  return statusOfTicket;
 }
 
 /**

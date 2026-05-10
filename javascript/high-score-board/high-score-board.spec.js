@@ -31,7 +31,7 @@ describe("addPlayer", () => {
     expect(actual).toEqual(expected);
   });
 
-  xtest("returns the existing score board", () => {
+  test("returns the existing score board", () => {
     const scoreBoard = {};
     const actual = addPlayer(scoreBoard, "Jesse Johnson", 1337);
 

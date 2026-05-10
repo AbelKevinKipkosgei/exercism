@@ -22,7 +22,8 @@ export function createScoreBoard() {
  * @returns {Record<string, number>} updated score board
  */
 export function addPlayer(scoreBoard, player, score) {
-  throw new Error("Remove this line and implement the function");
+  scoreBoard[player] = score;
+  return scoreBoard;
 }
 
 /**

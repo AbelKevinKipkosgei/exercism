@@ -47,7 +47,8 @@ export function removePlayer(scoreBoard, player) {
  * @returns {Record<string, number>} updated score board
  */
 export function updateScore(scoreBoard, player, points) {
-  throw new Error("Remove this line and implement the function");
+  scoreBoard[player] = scoreBoard[player] + points;
+  return scoreBoard;
 }
 
 /**

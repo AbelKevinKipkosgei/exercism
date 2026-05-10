@@ -58,5 +58,10 @@ export function updateScore(scoreBoard, player, points) {
  * @returns {Record<string, number>} updated score board
  */
 export function applyMondayBonus(scoreBoard) {
-  throw new Error("Remove this line and implement the function");
+  for (const player in scoreBoard) {
+    if (scoreBoard.hasOwnProperty(player)) {
+      scoreBoard[player] += 100;
+    }
+  }
+  return scoreBoard;
 }

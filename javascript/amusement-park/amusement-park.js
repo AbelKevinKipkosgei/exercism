@@ -53,7 +53,13 @@ export function ticketStatus(tickets, ticketId) {
  * @returns {string} ticket status
  */
 export function simpleTicketStatus(tickets, ticketId) {
-  throw new Error("Remove this line and implement the function");
+  let statusOfTicket = "unknown";
+  if (!Object.hasOwn(tickets, ticketId) || tickets[ticketId] === null) {
+    statusOfTicket = "invalid ticket !!!";
+  } else {
+    statusOfTicket = tickets[ticketId];
+  }
+  return statusOfTicket;
 }
 
 /**

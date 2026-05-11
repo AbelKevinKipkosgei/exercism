@@ -106,7 +106,7 @@ describe("simpleTicketStatus", () => {
 });
 
 describe("gtcVersion", () => {
-  xtest("determines the GTC version if it is present", () => {
+  test("determines the GTC version if it is present", () => {
     const visitor1 = {
       name: "Zohar Pekkanen",
       age: 28,
@@ -131,7 +131,7 @@ describe("gtcVersion", () => {
     expect(gtcVersion(visitor2)).toBe("1.6");
   });
 
-  xtest("returns nothing if there is no gtc object", () => {
+  test("returns nothing if there is no gtc object", () => {
     const visitor1 = {
       name: "Xuân Jahoda",
       age: 15,
@@ -148,7 +148,7 @@ describe("gtcVersion", () => {
     expect(gtcVersion(visitor2)).toBeUndefined();
   });
 
-  xtest("returns nothing if there is a gtc object but no gtc version", () => {
+  test("returns nothing if there is a gtc object but no gtc version", () => {
     const visitor1 = {
       name: "Xuân Jahoda",
       age: 15,
@@ -169,7 +169,7 @@ describe("gtcVersion", () => {
     expect(gtcVersion(visitor2)).toBeUndefined();
   });
 
-  xtest("does not modify the visitor object", () => {
+  test("does not modify the visitor object", () => {
     const visitor = {
       name: "Zohar Pekkanen",
       age: 28,
